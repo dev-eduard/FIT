@@ -1,0 +1,150 @@
+:root {
+  --primary-color: #6d34df;
+  --primary-hover: #732dff;
+  --primary-text: #ffffff;
+  
+  --bg-color: #ffffff;
+  --bg-secondary: #f5f5f5;
+  --text-color: #333333;
+  --text-secondary: #666666;
+  --border-color: #e0e0e0;
+  --card-bg: #ffffff;
+  --hover-color: rgba(0, 0, 0, 0.05);
+  
+  --footer-bg: #212121;
+  --footer-text: #ffffff;
+  --footer-text-secondary: #aaaaaa;
+}
+
+[data-theme="dark"] {
+  --primary-color: #732dff;
+  --primary-hover: #6d34df;
+  --primary-text: #ffffff;
+  
+  --bg-color: #121212;
+  --bg-secondary: #1e1e1e;
+  --text-color: #f5f5f5;
+  --text-secondary: #aaaaaa;
+  --border-color: #333333;
+  --card-bg: #1e1e1e;
+  --hover-color: rgba(255, 255, 255, 0.05);
+  
+  --footer-bg: #000000;
+  --footer-text: #ffffff;
+  --footer-text-secondary: #888888;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', 'Segoe UI', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.375rem;
+  font-weight: 500;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  
+  &.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--primary-text);
+    border: none;
+    
+    &:hover {
+      background-color: var(--primary-hover);
+    }
+  }
+  
+  &.btn-outline {
+    background-color: transparent;
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    
+    &:hover {
+      background-color: var(--hover-color);
+    }
+  }
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  
+  .badge {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--primary-text);
+    padding: 0.25rem 0.75rem;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    
+    @media (min-width: 768px) {
+      font-size: 2.5rem;
+    }
+  }
+  
+  p {
+    max-width: 800px;
+    margin: 0 auto;
+    color: var(--text-secondary);
+  }
+}
+
+// Animações
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}

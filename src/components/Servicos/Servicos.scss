@@ -1,0 +1,89 @@
+.servicos {
+  padding: 4rem 1rem;
+  background-color: var(--bg-secondary);
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    
+    .badge {
+      display: inline-block;
+      background-color: var(--primary-color);
+      color: var(--primary-text);
+      padding: 0.25rem 0.75rem;
+      border-radius: 0.5rem;
+      font-size: 0.875rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: var(--text-color);
+      
+      @media (min-width: 768px) {
+        font-size: 2.5rem;
+      }
+    }
+    
+    p {
+      max-width: 800px;
+      margin: 0 auto;
+      color: var(--text-secondary);
+    }
+  }
+  
+  .servicos-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    @media (min-width: 1024px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  .servico-card {
+    background-color: var(--card-bg);
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    h3 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: var(--text-color);
+    }
+    
+    p {
+      color: var(--text-secondary);
+      margin-bottom: 1.5rem;
+    }
+    
+    .servico-imagem {
+      img {
+        width: 100%;
+        height: auto;
+        border-radius: 0.5rem;
+        object-fit: cover;
+      }
+    }
+  }
+}

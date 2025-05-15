@@ -1,0 +1,44 @@
+.chamada {
+  padding: 4rem 1rem;
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .chamada-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    
+    h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: var(--text-color);
+      
+      @media (min-width: 768px) {
+        font-size: 2.5rem;
+      }
+    }
+    
+    p {
+      font-size: 1.125rem;
+      color: var(--text-secondary);
+      margin-bottom: 2rem;
+    }
+    
+    .chamada-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+    
+    .chamada-nota {
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+    }
+  }
+}

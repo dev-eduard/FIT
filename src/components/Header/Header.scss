@@ -1,0 +1,116 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--bg-color);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    img {
+      width: 32px;
+      height: 32px;
+    }
+
+    span {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--text-color);
+    }
+  }
+
+  .nav {
+    ul {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+
+      a {
+        color: var(--text-color);
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: var(--primary-color);
+          text-decoration: underline;
+          text-underline-offset: 4px;
+        }
+      }
+    }
+  }
+
+  .actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+
+    span {
+      display: block;
+      height: 3px;
+      width: 100%;
+      background-color: var(--text-color);
+      border-radius: 3px;
+      transition: all 0.3s ease;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .menu-toggle {
+      display: flex;
+    }
+
+    .nav {
+      position: fixed;
+      top: 64px;
+      left: 0;
+      right: 0;
+      background-color: var(--bg-color);
+      height: 0;
+      overflow: hidden;
+      transition: height 0.3s ease;
+
+      &.open {
+        height: auto;
+        padding: 1rem 0;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      ul {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 0 1rem;
+      }
+    }
+
+    .actions {
+      .btn {
+        display: none;
+      }
+    }
+  }
+}
