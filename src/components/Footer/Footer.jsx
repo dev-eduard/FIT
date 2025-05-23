@@ -61,26 +61,31 @@ const Footer = () => {
           <div className="footer-contact">
             <h3>Contato</h3>
             <address>
-              <a
-                href="https://maps.app.goo.gl/8noKCPGWYwnbSvPH6"
-                target="_blank"
-              >
-                Xique-Xique, BA
-              </a>
-              <br />
-              <a href="mailto:">FIT@gmail.com</a>
-              <br />
-              <a href="tel:0">(21) 98765-4321</a>
+              <ul>
+                <li>
+                  <a
+                    href="https://maps.app.goo.gl/8noKCPGWYwnbSvPH6"
+                    target="_blank"
+                  >
+                    Xique-Xique, BA
+                  </a>
+                </li>
+                <li>
+                  <a href="mailto:">FIT@gmail.com</a>
+                </li>
+                <li>
+                  <a href="tel:0">(21) 98765-4321</a>
+                </li>
+              </ul>
             </address>
           </div>
         </div>
 
         <div className="footer-bottom">
           <p>
-            &copy; {new Date().getFullYear()} FIT. Todos os direitos reservados.{" "}
-            <br />
+            &copy; <a href="#">FIT</a> &
             <a href="https://marcoseduardo.dev.br" target="_blank">
-              &copy; EDUARDO
+            &nbsp;EDUARDO
             </a>
           </p>
         </div>

@@ -117,13 +117,23 @@
         color: var(--footer-text-secondary);
       }
 
-      a {
-        color: var(--footer-text-secondary);
-        text-decoration: none;
-        transition: color 0.3s ease;
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
 
-        &:hover {
-          color: var(--primary-color);
+        li {
+          margin-bottom: 0.75rem;
+
+          a {
+            color: var(--footer-text-secondary);
+            text-decoration: none;
+            transition: color 0.3s ease;
+
+            &:hover {
+              color: var(--primary-color);
+            }
+          }
         }
       }
     }
@@ -139,7 +149,7 @@
       color: var(--footer-text-secondary);
       font-size: 0.875rem;
     }
-    a{
+    a {
       color: var(--footer-text-secondary);
       text-decoration: none;
       transition: color 0.3s ease;

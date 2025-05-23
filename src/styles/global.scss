@@ -34,6 +34,33 @@
   --footer-text-secondary: #888888;
 }
 
+::selection {
+  background-color: var(--primary-color);
+  color: #ffffff;
+}
+
+::-webkit {
+  &-selection {
+    background-color: var(--primary-color);
+    color: #ffffff;
+  }
+
+  &-scrollbar {
+    width: 3px;
+    height: 2px;
+    background: #101010;
+
+    &-track {
+      background: transparent;
+    }
+
+    &-thumb {
+      background: var(--primary-color);
+      border-radius: 15px;
+    }
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
